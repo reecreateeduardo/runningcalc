@@ -103,7 +103,7 @@ class MainActivity : AppCompatActivity() {
             // DISTANCE: To calculate your distance, fill in your time and pace
                 distance == null -> {
                     val calculatedDistance = (timeToSeconds(time).toDouble().div(timeToSeconds
-                    (pace.toString()).toDouble()) * 0.621371).format(2)
+                    (pace.toString()).toDouble())).format(2)
                     result.text = "Distance is $calculatedDistance Miles"
                 }
             // PACE: To calculate your pace, fill in your time and distance
@@ -128,8 +128,8 @@ class MainActivity : AppCompatActivity() {
                 }
             // DISTANCE: To calculate your distance, fill in your time and pace
                 distance == null -> {
-                    val calculatedDistance = ((timeToSeconds(time).div(timeToSeconds
-                    (pace.toString())).toDouble()) * 0.621371).format(2)
+                    val calculatedDistance = (timeToSeconds(time).toDouble().div(timeToSeconds
+                    (pace.toString()).toDouble()) * 1.60934).format(2)
                     result.text = "Distance is $calculatedDistance Miles"
                 }
             // PACE: To calculate your pace, fill in your time and distance
@@ -155,8 +155,8 @@ class MainActivity : AppCompatActivity() {
                 }
             // DISTANCE: To calculate your distance, fill in your time and pace
                 distance == null -> {
-                    val calculatedDistance = (timeToSeconds(time).div(timeToSeconds
-                    (pace.toString())) * 0.621371).format(2)
+                    val calculatedDistance = (timeToSeconds(time).toDouble().div(timeToSeconds
+                    (pace.toString()).toDouble()) * 0.621371).format(2)
                     result.text = "Distance is $calculatedDistance Miles"
                 }
             // PACE: To calculate your pace, fill in your time and distance
